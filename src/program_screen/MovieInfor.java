@@ -1,26 +1,27 @@
 package program_screen;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 public class MovieInfor extends JFrame {
 
 	private JPanel contentPane;
-	private final JLabel lblNewLabel_1 = new JLabel("New label");
-	private final JLabel label = new JLabel("New label");
-	private final JLabel label_1 = new JLabel("New label");
-	private final JLabel label_2 = new JLabel("New label");
-	private final JButton btnNewButton = new JButton("\uC608\uB9E4");
-	private final JLabel lblNewLabel_2 = new JLabel("New label");
-	private final JLabel label_3 = new JLabel("New label");
-	private final JLabel label_4 = new JLabel("New label");
-	private final JLabel label_5 = new JLabel("New label");
+	private final JTextField txtTitle = new JTextField("제목");
+	private final JTextField txtDate = new JTextField("개봉일");
+	private final JTextField txtCategory = new JTextField("카테고리");
+	private final JTextField txtRun_Time = new JTextField("상영시간");
+	private final JTextField txtGrade = new JTextField("등급");
+	private final JButton TicketButton = new JButton("예매");
+	private final JLabel lblTitle = new JLabel("제목");
+	private final JLabel lblDate = new JLabel("개봉일");
+	private final JLabel lblCategory = new JLabel("카테고리");
+	private final JLabel lblRun_Time = new JLabel("상영시간");
+	private final JLabel lblGrade = new JLabel("등급");
 
 	/**
 	 * Launch the application.
@@ -48,35 +49,46 @@ public class MovieInfor extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(76, 83, 200, 250);
-		contentPane.add(lblNewLabel);
-		lblNewLabel_1.setBounds(436, 113, 328, 30);
-		contentPane.add(lblNewLabel_1);
-		label.setBounds(436, 166, 328, 30);
+		JLabel lblimage = new JLabel("이미지");
+		lblimage.setBounds(76, 83, 200, 250);
+		contentPane.add(lblimage);
 		
-		contentPane.add(label);
-		label_1.setBounds(436, 227, 328, 30);
+		txtTitle.setEditable(false);
+		txtTitle.setBounds(436, 83, 328, 30);
+		contentPane.add(txtTitle);
 		
-		contentPane.add(label_1);
-		label_2.setBounds(436, 283, 328, 30);
+		txtDate.setEditable(false);
+		txtDate.setBounds(436, 136, 328, 30);
+		contentPane.add(txtDate);
 		
-		contentPane.add(label_2);
-		btnNewButton.setBounds(275, 367, 135, 44);
+		txtCategory.setEditable(false);
+		txtCategory.setBounds(436, 182, 328, 30);
+		contentPane.add(txtCategory);
 		
-		contentPane.add(btnNewButton);
-		lblNewLabel_2.setBounds(306, 113, 70, 30);
-		
-		contentPane.add(lblNewLabel_2);
-		label_3.setBounds(306, 166, 70, 30);
-		
-		contentPane.add(label_3);
-		label_4.setBounds(306, 227, 70, 30);
-		
-		contentPane.add(label_4);
-		label_5.setBounds(306, 283, 70, 30);
-		
-		contentPane.add(label_5);
-	}
+		txtRun_Time.setEditable(false);
+		txtRun_Time.setBounds(436, 230, 328, 30);
+		contentPane.add(txtRun_Time);
 
+		TicketButton.setBounds(275, 367, 135, 44);
+		contentPane.add(TicketButton);
+		
+		lblTitle.setBounds(306, 83, 70, 30);
+		contentPane.add(lblTitle);
+		
+		lblDate.setBounds(306, 136, 70, 30);
+		contentPane.add(lblDate);
+		
+		lblCategory.setBounds(306, 182, 70, 30);
+		contentPane.add(lblCategory);
+		
+		lblRun_Time.setBounds(306, 230, 70, 30);
+		contentPane.add(lblRun_Time);
+		
+		lblGrade.setBounds(306, 281, 70, 30);
+		contentPane.add(lblGrade);
+		
+		txtGrade.setEditable(false);
+		txtGrade.setBounds(436, 281, 328, 30);
+		contentPane.add(txtGrade);
+	}
 }
