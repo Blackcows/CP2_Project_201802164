@@ -77,11 +77,6 @@ public class MainScreen extends JFrame {
 		marketButton.setBounds(815, 14, 60, 30);
 		contentPane.add(marketButton);
 		
-		JPanel imagePanel = new CirclePanel();
-		imagePanel.setBounds(884, 10, 90, 86);
-		contentPane.add(imagePanel);
-		imagePanel.setLayout(null);
-		
 		textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setText("Á¦¸ñ");

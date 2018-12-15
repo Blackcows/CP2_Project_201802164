@@ -118,22 +118,19 @@ public class LoginFrame extends JFrame {
 				// 구현중
 				for(int i=0; i<Customerlist.size(); i++) {
 					if(inputID.equals(Customerlist.get(i).getID())) {
-						
+						if(inputPW.equals(Customerlist.get(i).getPW())){
+							mainScreen = new MainScreen();
+							mainScreen.setVisible(true);
+							dispose();
+						}
+						else {
+							// 비밀번호가 바르지 않습니다 메세지
+						}
 					}
 					else {
 						// 존재하지 않는 아이디입니다
 					}
 				
-				}
-				
-				if (inputID.equals("") || inputPW.equals(""))
-					System.out.println();
-				else {
-					mainScreen = new MainScreen();
-					mainScreen.setVisible(true);
-					
-					dispose();
-
 				}
 			}
 		});
