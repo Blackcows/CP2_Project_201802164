@@ -8,10 +8,17 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
+
+import Theater.Customer;
+
 import javax.swing.JButton;
 import java.awt.Color;
 
@@ -19,12 +26,14 @@ public class LoginFrame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JPasswordField passwordField;
+	private JPasswordField PasswordField;
 	private JTextField textField_1;
-	private JTextField textField_2;
 	
 	private Sign_in signin;
 	private MainScreen mainScreen;
+	
+	private String inputID, inputPW, ID, PW;
+	private ArrayList<Customer> Customerlist;
 	
 	/**
 	 * Launch the application.
@@ -90,23 +99,39 @@ public class LoginFrame extends JFrame {
 		lblPw.setBounds(110, 273, 52, 25);
 		getContentPane().add(lblPw);
 		
-		textField_2 = new JTextField();
-		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_2.setFont(new Font("굴림", Font.PLAIN, 15));
-		textField_2.setColumns(10);
-		textField_2.setBounds(174, 273, 150, 25);
-		getContentPane().add(textField_2);
+		PasswordField = new JPasswordField();
+		PasswordField.setHorizontalAlignment(SwingConstants.CENTER);
+		PasswordField.setFont(new Font("굴림", Font.PLAIN, 15));
+		PasswordField.setColumns(10);
+		PasswordField.setBounds(174, 273, 150, 25);
+		getContentPane().add(PasswordField);
 		
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 로그인 이벤트
 				// 고객 리스트를 가져와서 ID와 PW 확인하고 로그인 여부 판단
+				inputID = textField_1.getText();
+				inputPW = new String (PasswordField.getPassword());
 				
-				if (textField_1.equals("") || textField_2.equals(""))
+				readObject();
+				
+				// 구현중
+				for(int i=0; i<Customerlist.size(); i++) {
+					if(inputID.equals(Customerlist.get(i).getID())) {
+						
+					}
+					else {
+						// 존재하지 않는 아이디입니다
+					}
+				
+				}
+				
+				if (inputID.equals("") || inputPW.equals(""))
 					System.out.println();
 				else {
 					mainScreen = new MainScreen();
 					mainScreen.setVisible(true);
+					
 					dispose();
 
 				}
@@ -121,6 +146,20 @@ public class LoginFrame extends JFrame {
 				signin.setVisible(true);
 			}
 		});
+	}
+	
+	private void readObject() {
+		ObjectInputStream ois = null;
+		try {
+			ois = new ObjectInputStream(new FileInputStream("CustomerObject.dat"));
+			Customerlist = (ArrayList<Customer>) ois.readObject();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			this.Customerlist = new ArrayList<>();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
 
