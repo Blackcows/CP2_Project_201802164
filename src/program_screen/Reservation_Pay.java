@@ -12,12 +12,16 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Reservation_Pay extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	String[] fruits={"카드", "캐시", "계좌이체", "무통장입금", "문화상품권", "영화관람권"};
+	private JTextField txtTotalPrice;
+	String[] pay={"카드", "캐시", "계좌이체", "무통장입금", "문화상품권", "영화관람권"};
+	
+	private MainScreen mainScreen;
 
 	/**
 	 * Launch the application.
@@ -46,33 +50,40 @@ public class Reservation_Pay extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		
-		JLabel label = new JLabel("\uACB0\uC81C\uC218\uB2E8 \uC120\uD0DD");
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("굴림", Font.PLAIN, 15));
-		label.setBounds(29, 117, 100, 30);
-		contentPane.add(label);
+		JLabel lblPay = new JLabel("결재 수단 선택");
+		lblPay.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPay.setFont(new Font("굴림", Font.PLAIN, 15));
+		lblPay.setBounds(12, 117, 117, 30);
+		contentPane.add(lblPay);
 		
-		JComboBox comboBox = new JComboBox(fruits);
-		comboBox.setFont(new Font("굴림", Font.PLAIN, 15));
-		comboBox.setBounds(134, 117, 147, 30);
-		contentPane.add(comboBox);
+		JComboBox comboBox_Pay = new JComboBox(pay);
+		comboBox_Pay.setFont(new Font("굴림", Font.PLAIN, 15));
+		comboBox_Pay.setBounds(134, 117, 147, 30);
+		contentPane.add(comboBox_Pay);
 		
-		JLabel lblNewLabel = new JLabel("\uCD1D \uACB0\uC81C \uAE08\uC561 : ");
-		lblNewLabel.setFont(new Font("굴림", Font.PLAIN, 15));
-		lblNewLabel.setBounds(29, 216, 100, 30);
-		contentPane.add(lblNewLabel);
+		JLabel lblTotalPrice = new JLabel("총 결재 금액 : ");
+		lblTotalPrice.setFont(new Font("굴림", Font.PLAIN, 15));
+		lblTotalPrice.setBounds(29, 216, 100, 30);
+		contentPane.add(lblTotalPrice);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(134, 222, 116, 21);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtTotalPrice = new JTextField(); // 금액 나오는 필드
+		txtTotalPrice.setEditable(false);
+		txtTotalPrice.setBounds(134, 222, 116, 21);
+		contentPane.add(txtTotalPrice);
+		txtTotalPrice.setColumns(10);
 		
-		JButton btnNewButton = new JButton("\uACB0\uC81C");
-		btnNewButton.setBackground(new Color(255, 0, 0));
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setFont(new Font("굴림", Font.PLAIN, 18));
-		btnNewButton.setBounds(134, 315, 95, 30);
-		contentPane.add(btnNewButton);
+		JButton btnClear = new JButton("결재");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mainScreen = new MainScreen();
+				mainScreen.setVisible(true);
+				dispose();
+			}
+		});
+		btnClear.setBackground(new Color(255, 0, 0));
+		btnClear.setForeground(Color.BLACK);
+		btnClear.setFont(new Font("굴림", Font.PLAIN, 18));
+		btnClear.setBounds(134, 315, 95, 30);
+		contentPane.add(btnClear);
 	}
 }

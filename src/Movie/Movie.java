@@ -1,6 +1,8 @@
 package Movie;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
 
 	/**
 	 * 이런식으로 만들면 됨. extends를 이용해서 카테고리 별로 따로 클래스 정의해서 사용하면 좋을듯

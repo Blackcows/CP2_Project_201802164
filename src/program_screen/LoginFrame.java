@@ -26,14 +26,19 @@ public class LoginFrame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JPasswordField PasswordField;
-	private JTextField textField_1;
+	private JPasswordField txtPW;
+	private JTextField txtID;
 	
 	private Sign_in signin;
 	private MainScreen mainScreen;
 	
-	private String inputID, inputPW, ID, PW;
+	private String inputID, inputPW;
 	private ArrayList<Customer> Customerlist;
+	String UserID, UserPW;
+	String UserName;
+	String UserEmail;
+	String UserNumber;
+	String UserPhoneNumber;
 	
 	/**
 	 * Launch the application.
@@ -60,38 +65,25 @@ public class LoginFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Java Movie Theater");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setLabelFor(this);
-		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 20));
-		lblNewLabel.setBounds(134, 61, 186, 30);
-		getContentPane().add(lblNewLabel);
+		JLabel lblTitle = new JLabel("Java Movie Theater");
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setLabelFor(this);
+		lblTitle.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 20));
+		lblTitle.setBounds(134, 61, 186, 30);
+		getContentPane().add(lblTitle);
 		
-		JButton btnLogin = new JButton("로그인");
-		btnLogin.setFont(new Font("굴림", Font.PLAIN, 16));
+		JLabel lblID = new JLabel("ID");
+		lblID.setFont(new Font("굴림", Font.PLAIN, 16));
+		lblID.setHorizontalAlignment(SwingConstants.CENTER);
+		lblID.setBounds(110, 234, 52, 25);
+		getContentPane().add(lblID);
 		
-		btnLogin.setBounds(57, 368, 164, 37);
-		getContentPane().add(btnLogin);
-		
-		JButton button = new JButton("회원가입");
-		button.setFont(new Font("굴림", Font.PLAIN, 16));
-		button.setBackground(new Color(173, 216, 230));
-		
-		button.setBounds(283, 368, 164, 37);
-		getContentPane().add(button);
-		
-		JLabel lblNewLabel_1 = new JLabel("ID");
-		lblNewLabel_1.setFont(new Font("굴림", Font.PLAIN, 16));
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(110, 234, 52, 25);
-		getContentPane().add(lblNewLabel_1);
-		
-		textField_1 = new JTextField();
-		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setFont(new Font("굴림", Font.PLAIN, 15));
-		textField_1.setBounds(174, 234, 150, 25);
-		getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		txtID = new JTextField();
+		txtID.setHorizontalAlignment(SwingConstants.CENTER);
+		txtID.setFont(new Font("굴림", Font.PLAIN, 15));
+		txtID.setBounds(174, 234, 150, 25);
+		getContentPane().add(txtID);
+		txtID.setColumns(10);
 		
 		JLabel lblPw = new JLabel("PW");
 		lblPw.setHorizontalAlignment(SwingConstants.CENTER);
@@ -99,19 +91,32 @@ public class LoginFrame extends JFrame {
 		lblPw.setBounds(110, 273, 52, 25);
 		getContentPane().add(lblPw);
 		
-		PasswordField = new JPasswordField();
-		PasswordField.setHorizontalAlignment(SwingConstants.CENTER);
-		PasswordField.setFont(new Font("굴림", Font.PLAIN, 15));
-		PasswordField.setColumns(10);
-		PasswordField.setBounds(174, 273, 150, 25);
-		getContentPane().add(PasswordField);
+		txtPW = new JPasswordField();
+		txtPW.setHorizontalAlignment(SwingConstants.CENTER);
+		txtPW.setFont(new Font("굴림", Font.PLAIN, 15));
+		txtPW.setColumns(10);
+		txtPW.setBounds(174, 273, 150, 25);
+		getContentPane().add(txtPW);
+		
+		JButton btnLogin = new JButton("로그인");
+		btnLogin.setFont(new Font("굴림", Font.PLAIN, 16));
+		
+		btnLogin.setBounds(57, 368, 164, 37);
+		getContentPane().add(btnLogin);
+		
+		JButton btnSign_in = new JButton("회원가입");
+		btnSign_in.setFont(new Font("굴림", Font.PLAIN, 16));
+		btnSign_in.setBackground(new Color(173, 216, 230));
+		
+		btnSign_in.setBounds(283, 368, 164, 37);
+		getContentPane().add(btnSign_in);
 		
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 로그인 이벤트
 				// 고객 리스트를 가져와서 ID와 PW 확인하고 로그인 여부 판단
-				inputID = textField_1.getText();
-				inputPW = new String (PasswordField.getPassword());
+				inputID = txtID.getText();
+				inputPW = new String (txtPW.getPassword());
 				
 				readObject();
 				
@@ -119,6 +124,11 @@ public class LoginFrame extends JFrame {
 				for(int i=0; i<Customerlist.size(); i++) {
 					if(inputID.equals(Customerlist.get(i).getID())) {
 						if(inputPW.equals(Customerlist.get(i).getPW())){
+							UserID = inputID;
+							UserPW = inputPW;
+							UserName = Customerlist.get(i).getName();
+							UserEmail = Customerlist.get(i).getEmail();
+							UserNumber = Customerlist.get(i).getNumber();
 							mainScreen = new MainScreen();
 							mainScreen.setVisible(true);
 							dispose();
@@ -134,7 +144,7 @@ public class LoginFrame extends JFrame {
 				}
 			}
 		});
-		button.addActionListener(new ActionListener() {
+		btnSign_in.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 회원가입 이벤트
 				// 회원가입 창 띄우기

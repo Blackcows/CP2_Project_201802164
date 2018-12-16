@@ -14,11 +14,15 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Reservation_Seat extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtwon;
+	private JTextField txtPrice;
+	
+	private Reservation_Pay reservation_Pay;
 
 	/**
 	 * Launch the application.
@@ -52,531 +56,1065 @@ public class Reservation_Seat extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(5, 2, 5, 5));
 		
-		JButton btnNewButton = new JButton("");
-		panel.add(btnNewButton);
+		JButton btnA1 = new JButton("");
+		btnA1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnA1);
 		
-		JButton button_11 = new JButton("");
-		panel.add(button_11);
+		JButton btnA2 = new JButton("");
+		btnA2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnA2);
 		
-		JButton button_8 = new JButton("");
-		panel.add(button_8);
+		JButton btnB1 = new JButton("");
+		btnB1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnB1);
 		
-		JButton button_7 = new JButton("");
-		panel.add(button_7);
+		JButton btnB2 = new JButton("");
+		btnB2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnB2);
 		
-		JButton button_3 = new JButton("");
-		panel.add(button_3);
+		JButton btnC1 = new JButton("");
+		btnC1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnC1);
 		
-		JButton button_10 = new JButton("");
-		panel.add(button_10);
+		JButton btnC2 = new JButton("");
+		btnC2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnC2);
 		
-		JButton button_2 = new JButton("");
-		panel.add(button_2);
+		JButton btnD1 = new JButton("");
+		btnD1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnD1);
 		
-		JButton button_4 = new JButton("");
-		panel.add(button_4);
+		JButton btnD2 = new JButton("");
+		btnD2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnD2);
 		
-		JButton button_6 = new JButton("");
-		panel.add(button_6);
+		JButton btnE1 = new JButton("");
+		btnE1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnE1);
 		
-		JButton button_12 = new JButton("");
-		panel.add(button_12);
+		JButton btnE2 = new JButton("");
+		btnE2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel.add(btnE2);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(66, 295, 80, 131);
 		contentPane.add(panel_1);
 		panel_1.setLayout(new GridLayout(4, 2, 5, 5));
 		
-		JButton button_15 = new JButton("");
-		panel_1.add(button_15);
+		JButton btnF1 = new JButton("");
+		btnF1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btnF1);
 		
-		JButton button_16 = new JButton("");
-		panel_1.add(button_16);
+		JButton btnF2 = new JButton("");
+		btnF2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btnF2);
 		
-		JButton button_19 = new JButton("");
-		panel_1.add(button_19);
+		JButton btnG1 = new JButton("");
+		btnG1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btnG1);
 		
-		JButton button_20 = new JButton("");
-		panel_1.add(button_20);
+		JButton btnG2 = new JButton("");
+		btnG2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btnG2);
 		
-		JButton button_23 = new JButton("");
-		panel_1.add(button_23);
+		JButton btnH1 = new JButton("");
+		btnH1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btnH1);
 		
-		JButton button_24 = new JButton("");
-		panel_1.add(button_24);
+		JButton btnH2 = new JButton("");
+		btnH2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btnH2);
 		
-		JButton button_27 = new JButton("");
-		panel_1.add(button_27);
+		JButton btn_I1 = new JButton("");
+		btn_I1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btn_I1);
 		
-		JButton button_28 = new JButton("");
-		panel_1.add(button_28);
+		JButton btn_I2 = new JButton("");
+		btn_I2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_1.add(btn_I2);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(737, 101, 80, 159);
 		contentPane.add(panel_2);
 		panel_2.setLayout(new GridLayout(5, 2, 5, 5));
 		
-		JButton button_31 = new JButton("");
-		panel_2.add(button_31);
+		JButton btnA14 = new JButton("");
+		btnA14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnA14);
 		
-		JButton button_32 = new JButton("");
-		panel_2.add(button_32);
+		JButton btnA15 = new JButton("");
+		btnA15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnA15);
 		
-		JButton button_33 = new JButton("");
-		panel_2.add(button_33);
+		JButton btnB14 = new JButton("");
+		btnB14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnB14);
 		
-		JButton button_34 = new JButton("");
-		panel_2.add(button_34);
+		JButton btnB15 = new JButton("");
+		btnB15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnB15);
 		
-		JButton button_35 = new JButton("");
-		panel_2.add(button_35);
+		JButton btnC14 = new JButton("");
+		btnC14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnC14);
 		
-		JButton button_36 = new JButton("");
-		panel_2.add(button_36);
+		JButton brnC15 = new JButton("");
+		brnC15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(brnC15);
 		
-		JButton button_39 = new JButton("");
-		panel_2.add(button_39);
+		JButton btnD14 = new JButton("");
+		btnD14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnD14);
 		
-		JButton button_40 = new JButton("");
-		panel_2.add(button_40);
+		JButton btnD15 = new JButton("");
+		btnD15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnD15);
 		
-		JButton button_43 = new JButton("");
-		panel_2.add(button_43);
+		JButton btnE14 = new JButton("");
+		btnE14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(btnE14);
 		
-		JButton button_44 = new JButton("");
-		panel_2.add(button_44);
+		JButton brnE15 = new JButton("");
+		brnE15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_2.add(brnE15);
 		
 		JPanel panel_4 = new JPanel();
 		panel_4.setBounds(191, 101, 502, 159);
 		contentPane.add(panel_4);
 		panel_4.setLayout(null);
 		
-		JButton button_64 = new JButton("");
-		button_64.setBounds(46, 2, 41, 27);
-		panel_4.add(button_64);
+		JButton btnA4 = new JButton("");
+		btnA4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA4.setBounds(46, 2, 41, 27);
+		panel_4.add(btnA4);
 		
-		JButton button_65 = new JButton("");
-		button_65.setBounds(92, 2, 41, 27);
-		panel_4.add(button_65);
+		JButton btnA5 = new JButton("");
+		btnA5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA5.setBounds(92, 2, 41, 27);
+		panel_4.add(btnA5);
 		
-		JButton button_66 = new JButton("");
-		button_66.setBounds(138, 2, 41, 27);
-		panel_4.add(button_66);
+		JButton btnA6 = new JButton("");
+		btnA6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA6.setBounds(138, 2, 41, 27);
+		panel_4.add(btnA6);
 		
-		JButton button_67 = new JButton("");
-		button_67.setBounds(184, 2, 41, 27);
-		panel_4.add(button_67);
+		JButton btnA7 = new JButton("");
+		btnA7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA7.setBounds(184, 2, 41, 27);
+		panel_4.add(btnA7);
 		
-		JButton button_68 = new JButton("");
-		button_68.setBounds(230, 2, 41, 27);
-		panel_4.add(button_68);
+		JButton btnA8 = new JButton("");
+		btnA8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA8.setBounds(230, 2, 41, 27);
+		panel_4.add(btnA8);
 		
-		JButton button_69 = new JButton("");
-		button_69.setBounds(276, 2, 41, 27);
-		panel_4.add(button_69);
+		JButton btnA9 = new JButton("");
+		btnA9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA9.setBounds(276, 2, 41, 27);
+		panel_4.add(btnA9);
 		
-		JButton button_70 = new JButton("");
-		button_70.setBounds(322, 2, 41, 27);
-		panel_4.add(button_70);
+		JButton btnA10 = new JButton("");
+		btnA10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA10.setBounds(322, 2, 41, 27);
+		panel_4.add(btnA10);
 		
-		JButton button_71 = new JButton("");
-		button_71.setBounds(368, 2, 41, 27);
-		panel_4.add(button_71);
+		JButton btnA11 = new JButton("");
+		btnA11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA11.setBounds(368, 2, 41, 27);
+		panel_4.add(btnA11);
 		
-		JButton button_72 = new JButton("");
-		button_72.setBounds(414, 2, 41, 27);
-		panel_4.add(button_72);
+		JButton btnA12 = new JButton("");
+		btnA12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA12.setBounds(414, 2, 41, 27);
+		panel_4.add(btnA12);
 		
-		JButton button_73 = new JButton("");
-		button_73.setBounds(460, 2, 41, 27);
-		panel_4.add(button_73);
+		JButton btnA13 = new JButton("");
+		btnA13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnA13.setBounds(460, 2, 41, 27);
+		panel_4.add(btnA13);
 		
-		JButton button_17 = new JButton("");
-		button_17.setBounds(0, 34, 41, 27);
-		panel_4.add(button_17);
+		JButton btnB3 = new JButton("");
+		btnB3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB3.setBounds(0, 34, 41, 27);
+		panel_4.add(btnB3);
 		
-		JButton button_74 = new JButton("");
-		button_74.setBounds(46, 34, 41, 27);
-		panel_4.add(button_74);
+		JButton btnB4 = new JButton("");
+		btnB4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB4.setBounds(46, 34, 41, 27);
+		panel_4.add(btnB4);
 		
-		JButton button_75 = new JButton("");
-		button_75.setBounds(92, 34, 41, 27);
-		panel_4.add(button_75);
+		JButton btnB5 = new JButton("");
+		btnB5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB5.setBounds(92, 34, 41, 27);
+		panel_4.add(btnB5);
 		
-		JButton button_76 = new JButton("");
-		button_76.setBounds(138, 34, 41, 27);
-		panel_4.add(button_76);
+		JButton btnB6 = new JButton("");
+		btnB6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB6.setBounds(138, 34, 41, 27);
+		panel_4.add(btnB6);
 		
-		JButton button_77 = new JButton("");
-		button_77.setBounds(184, 34, 41, 27);
-		panel_4.add(button_77);
+		JButton btnB7 = new JButton("");
+		btnB7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB7.setBounds(184, 34, 41, 27);
+		panel_4.add(btnB7);
 		
-		JButton button = new JButton("");
-		button.setBounds(230, 34, 41, 27);
-		panel_4.add(button);
+		JButton btnB8 = new JButton("");
+		btnB8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB8.setBounds(230, 34, 41, 27);
+		panel_4.add(btnB8);
 		
-		JButton button_21 = new JButton("");
-		button_21.setBounds(276, 34, 41, 27);
-		panel_4.add(button_21);
+		JButton btnB9 = new JButton("");
+		btnB9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB9.setBounds(276, 34, 41, 27);
+		panel_4.add(btnB9);
 		
-		JButton button_18 = new JButton("");
-		button_18.setBounds(322, 34, 41, 27);
-		panel_4.add(button_18);
+		JButton btnB10 = new JButton("");
+		btnB10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB10.setBounds(322, 34, 41, 27);
+		panel_4.add(btnB10);
 		
-		JButton button_78 = new JButton("");
-		button_78.setBounds(368, 34, 41, 27);
-		panel_4.add(button_78);
+		JButton btnB11 = new JButton("");
+		btnB11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB11.setBounds(368, 34, 41, 27);
+		panel_4.add(btnB11);
 		
-		JButton button_5 = new JButton("");
-		button_5.setBounds(414, 34, 41, 27);
-		panel_4.add(button_5);
+		JButton btnB12 = new JButton("");
+		btnB12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB12.setBounds(414, 34, 41, 27);
+		panel_4.add(btnB12);
 		
-		JButton button_1 = new JButton("");
-		button_1.setBounds(460, 34, 41, 27);
-		panel_4.add(button_1);
+		JButton btnB13 = new JButton("");
+		btnB13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnB13.setBounds(460, 34, 41, 27);
+		panel_4.add(btnB13);
 		
-		JButton button_13 = new JButton("");
-		button_13.setBounds(0, 66, 41, 27);
-		panel_4.add(button_13);
+		JButton btnC3 = new JButton("");
+		btnC3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC3.setBounds(0, 66, 41, 27);
+		panel_4.add(btnC3);
 		
-		JButton button_9 = new JButton("");
-		button_9.setBounds(46, 66, 41, 27);
-		panel_4.add(button_9);
+		JButton btnC4 = new JButton("");
+		btnC4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC4.setBounds(46, 66, 41, 27);
+		panel_4.add(btnC4);
 		
-		JButton button_14 = new JButton("");
-		button_14.setBounds(92, 66, 41, 27);
-		panel_4.add(button_14);
+		JButton btnC5 = new JButton("");
+		btnC5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC5.setBounds(92, 66, 41, 27);
+		panel_4.add(btnC5);
 		
-		JButton button_22 = new JButton("");
-		button_22.setBounds(138, 66, 41, 27);
-		panel_4.add(button_22);
+		JButton btnC6 = new JButton("");
+		btnC6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC6.setBounds(138, 66, 41, 27);
+		panel_4.add(btnC6);
 		
-		JButton button_25 = new JButton("");
-		button_25.setBounds(184, 66, 41, 27);
-		panel_4.add(button_25);
+		JButton btnC7 = new JButton("");
+		btnC7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC7.setBounds(184, 66, 41, 27);
+		panel_4.add(btnC7);
 		
-		JButton button_46 = new JButton("");
-		button_46.setBounds(230, 66, 41, 27);
-		panel_4.add(button_46);
+		JButton btnC8 = new JButton("");
+		btnC8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC8.setBounds(230, 66, 41, 27);
+		panel_4.add(btnC8);
 		
-		JButton button_26 = new JButton("");
-		button_26.setBounds(276, 66, 41, 27);
-		panel_4.add(button_26);
+		JButton btnC9 = new JButton("");
+		btnC9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC9.setBounds(276, 66, 41, 27);
+		panel_4.add(btnC9);
 		
-		JButton button_29 = new JButton("");
-		button_29.setBounds(322, 66, 41, 27);
-		panel_4.add(button_29);
+		JButton btnC10 = new JButton("");
+		btnC10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC10.setBounds(322, 66, 41, 27);
+		panel_4.add(btnC10);
 		
-		JButton button_30 = new JButton("");
-		button_30.setBounds(368, 66, 41, 27);
-		panel_4.add(button_30);
+		JButton btnC11 = new JButton("");
+		btnC11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC11.setBounds(368, 66, 41, 27);
+		panel_4.add(btnC11);
 		
-		JButton button_47 = new JButton("");
-		button_47.setBounds(414, 66, 41, 27);
-		panel_4.add(button_47);
+		JButton btnC12 = new JButton("");
+		btnC12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC12.setBounds(414, 66, 41, 27);
+		panel_4.add(btnC12);
 		
-		JButton button_37 = new JButton("");
-		button_37.setBounds(460, 66, 41, 27);
-		panel_4.add(button_37);
+		JButton btnC13 = new JButton("");
+		btnC13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnC13.setBounds(460, 66, 41, 27);
+		panel_4.add(btnC13);
 		
-		JButton button_38 = new JButton("");
-		button_38.setBounds(0, 98, 41, 27);
-		panel_4.add(button_38);
+		JButton btnD3 = new JButton("");
+		btnD3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD3.setBounds(0, 98, 41, 27);
+		panel_4.add(btnD3);
 		
-		JButton button_41 = new JButton("");
-		button_41.setBounds(46, 98, 41, 27);
-		panel_4.add(button_41);
+		JButton btnD4 = new JButton("");
+		btnD4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD4.setBounds(46, 98, 41, 27);
+		panel_4.add(btnD4);
 		
-		JButton button_42 = new JButton("");
-		button_42.setBounds(92, 98, 41, 27);
-		panel_4.add(button_42);
+		JButton btnD5 = new JButton("");
+		btnD5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD5.setBounds(92, 98, 41, 27);
+		panel_4.add(btnD5);
 		
-		JButton button_45 = new JButton("");
-		button_45.setBounds(138, 98, 41, 27);
-		panel_4.add(button_45);
+		JButton btnD6 = new JButton("");
+		btnD6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD6.setBounds(138, 98, 41, 27);
+		panel_4.add(btnD6);
 		
-		JButton button_48 = new JButton("");
-		button_48.setBounds(184, 98, 41, 27);
-		panel_4.add(button_48);
+		JButton btnD7 = new JButton("");
+		btnD7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD7.setBounds(184, 98, 41, 27);
+		panel_4.add(btnD7);
 		
-		JButton button_51 = new JButton("");
-		button_51.setBounds(230, 98, 41, 27);
-		panel_4.add(button_51);
+		JButton btnD8 = new JButton("");
+		btnD8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD8.setBounds(230, 98, 41, 27);
+		panel_4.add(btnD8);
 		
-		JButton button_49 = new JButton("");
-		button_49.setBounds(276, 98, 41, 27);
-		panel_4.add(button_49);
+		JButton btnD9 = new JButton("");
+		btnD9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD9.setBounds(276, 98, 41, 27);
+		panel_4.add(btnD9);
 		
-		JButton button_50 = new JButton("");
-		button_50.setBounds(322, 98, 41, 27);
-		panel_4.add(button_50);
+		JButton btnD10 = new JButton("");
+		btnD10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD10.setBounds(322, 98, 41, 27);
+		panel_4.add(btnD10);
 		
-		JButton button_52 = new JButton("");
-		button_52.setBounds(368, 98, 41, 27);
-		panel_4.add(button_52);
+		JButton btnD11 = new JButton("");
+		btnD11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD11.setBounds(368, 98, 41, 27);
+		panel_4.add(btnD11);
 		
-		JButton button_53 = new JButton("");
-		button_53.setBounds(414, 98, 41, 27);
-		panel_4.add(button_53);
+		JButton btnD12 = new JButton("");
+		btnD12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD12.setBounds(414, 98, 41, 27);
+		panel_4.add(btnD12);
 		
-		JButton button_54 = new JButton("");
-		button_54.setBounds(460, 98, 41, 27);
-		panel_4.add(button_54);
+		JButton btnD13 = new JButton("");
+		btnD13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnD13.setBounds(460, 98, 41, 27);
+		panel_4.add(btnD13);
 		
-		JButton button_55 = new JButton("");
-		button_55.setBounds(0, 130, 41, 27);
-		panel_4.add(button_55);
+		JButton btnE3 = new JButton("");
+		btnE3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE3.setBounds(0, 130, 41, 27);
+		panel_4.add(btnE3);
 		
-		JButton button_56 = new JButton("");
-		button_56.setBounds(46, 130, 41, 27);
-		panel_4.add(button_56);
+		JButton btnE4 = new JButton("");
+		btnE4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE4.setBounds(46, 130, 41, 27);
+		panel_4.add(btnE4);
 		
-		JButton button_57 = new JButton("");
-		button_57.setBounds(92, 130, 41, 27);
-		panel_4.add(button_57);
+		JButton btnE5 = new JButton("");
+		btnE5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE5.setBounds(92, 130, 41, 27);
+		panel_4.add(btnE5);
 		
-		JButton button_58 = new JButton("");
-		button_58.setBounds(138, 130, 41, 27);
-		panel_4.add(button_58);
+		JButton btnE6 = new JButton("");
+		btnE6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE6.setBounds(138, 130, 41, 27);
+		panel_4.add(btnE6);
 		
-		JButton button_59 = new JButton("");
-		button_59.setBounds(184, 130, 41, 27);
-		panel_4.add(button_59);
+		JButton btnE7 = new JButton("");
+		btnE7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE7.setBounds(184, 130, 41, 27);
+		panel_4.add(btnE7);
 		
-		JButton button_60 = new JButton("");
-		button_60.setBounds(230, 130, 41, 27);
-		panel_4.add(button_60);
+		JButton btnE8 = new JButton("");
+		btnE8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE8.setBounds(230, 130, 41, 27);
+		panel_4.add(btnE8);
 		
-		JButton button_61 = new JButton("");
-		button_61.setBounds(276, 130, 41, 27);
-		panel_4.add(button_61);
+		JButton btnE9 = new JButton("");
+		btnE9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE9.setBounds(276, 130, 41, 27);
+		panel_4.add(btnE9);
 		
-		JButton button_62 = new JButton("");
-		button_62.setBounds(322, 130, 41, 27);
-		panel_4.add(button_62);
+		JButton btnE10 = new JButton("");
+		btnE10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE10.setBounds(322, 130, 41, 27);
+		panel_4.add(btnE10);
 		
-		JButton button_95 = new JButton("");
-		button_95.setBounds(368, 130, 41, 27);
-		panel_4.add(button_95);
+		JButton btnE11 = new JButton("");
+		btnE11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE11.setBounds(368, 130, 41, 27);
+		panel_4.add(btnE11);
 		
-		JButton button_96 = new JButton("");
-		button_96.setBounds(414, 130, 41, 27);
-		panel_4.add(button_96);
+		JButton btnE12 = new JButton("");
+		btnE12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE12.setBounds(414, 130, 41, 27);
+		panel_4.add(btnE12);
 		
-		JButton button_97 = new JButton("");
-		button_97.setBounds(460, 130, 41, 27);
-		panel_4.add(button_97);
+		JButton btnE13 = new JButton("");
+		btnE13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnE13.setBounds(460, 130, 41, 27);
+		panel_4.add(btnE13);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBounds(191, 295, 502, 131);
 		contentPane.add(panel_3);
 		panel_3.setLayout(new GridLayout(4, 11, 5, 5));
 		
-		JButton button_79 = new JButton("");
-		panel_3.add(button_79);
+		JButton btnF3 = new JButton("");
+		btnF3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF3);
 		
-		JButton button_80 = new JButton("");
-		panel_3.add(button_80);
+		JButton btnF4 = new JButton("");
+		btnF4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF4);
 		
-		JButton button_81 = new JButton("");
-		panel_3.add(button_81);
+		JButton btnF5 = new JButton("");
+		btnF5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF5);
 		
-		JButton button_82 = new JButton("");
-		panel_3.add(button_82);
+		JButton btnF6 = new JButton("");
+		btnF6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF6);
 		
-		JButton button_83 = new JButton("");
-		panel_3.add(button_83);
+		JButton btnF7 = new JButton("");
+		btnF7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF7);
 		
-		JButton button_84 = new JButton("");
-		panel_3.add(button_84);
+		JButton btnF8 = new JButton("");
+		btnF8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF8);
 		
-		JButton button_85 = new JButton("");
-		panel_3.add(button_85);
+		JButton btnF9 = new JButton("");
+		btnF9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF9);
 		
-		JButton button_86 = new JButton("");
-		panel_3.add(button_86);
+		JButton btnF10 = new JButton("");
+		btnF10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF10);
 		
-		JButton button_87 = new JButton("");
-		panel_3.add(button_87);
+		JButton btnF11 = new JButton("");
+		btnF11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF11);
 		
-		JButton button_88 = new JButton("");
-		panel_3.add(button_88);
+		JButton btnF12 = new JButton("");
+		btnF12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF12);
 		
-		JButton button_89 = new JButton("");
-		panel_3.add(button_89);
+		JButton btnF13 = new JButton("");
+		btnF13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnF13);
 		
-		JButton button_90 = new JButton("");
-		panel_3.add(button_90);
+		JButton btnG3 = new JButton("");
+		btnG3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG3);
 		
-		JButton button_91 = new JButton("");
-		panel_3.add(button_91);
+		JButton btnG4 = new JButton("");
+		btnG4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG4);
 		
-		JButton button_92 = new JButton("");
-		panel_3.add(button_92);
+		JButton btnG5 = new JButton("");
+		btnG5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG5);
 		
-		JButton button_93 = new JButton("");
-		panel_3.add(button_93);
+		JButton btnG6 = new JButton("");
+		btnG6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG6);
 		
-		JButton button_94 = new JButton("");
-		panel_3.add(button_94);
+		JButton btnG7 = new JButton("");
+		btnG7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG7);
 		
-		JButton button_98 = new JButton("");
-		panel_3.add(button_98);
+		JButton btnG8 = new JButton("");
+		btnG8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG8);
 		
-		JButton button_99 = new JButton("");
-		panel_3.add(button_99);
+		JButton btnG9 = new JButton("");
+		btnG9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG9);
 		
-		JButton button_100 = new JButton("");
-		panel_3.add(button_100);
+		JButton btnG10 = new JButton("");
+		btnG10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG10);
 		
-		JButton button_101 = new JButton("");
-		panel_3.add(button_101);
+		JButton btnG11 = new JButton("");
+		btnG11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG11);
 		
-		JButton button_102 = new JButton("");
-		panel_3.add(button_102);
+		JButton btnG12 = new JButton("");
+		btnG12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG12);
 		
-		JButton button_103 = new JButton("");
-		panel_3.add(button_103);
+		JButton btnG13 = new JButton("");
+		btnG13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnG13);
 		
-		JButton button_104 = new JButton("");
-		panel_3.add(button_104);
+		JButton btnH3 = new JButton("");
+		btnH3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH3);
 		
-		JButton button_105 = new JButton("");
-		panel_3.add(button_105);
+		JButton btnH4 = new JButton("");
+		btnH4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH4);
 		
-		JButton button_106 = new JButton("");
-		panel_3.add(button_106);
+		JButton btnH5 = new JButton("");
+		btnH5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH5);
 		
-		JButton button_107 = new JButton("");
-		panel_3.add(button_107);
+		JButton btnH6 = new JButton("");
+		btnH6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH6);
 		
-		JButton button_108 = new JButton("");
-		panel_3.add(button_108);
+		JButton btnH7 = new JButton("");
+		btnH7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH7);
 		
-		JButton button_109 = new JButton("");
-		panel_3.add(button_109);
+		JButton btnH8 = new JButton("");
+		btnH8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH8);
 		
-		JButton button_110 = new JButton("");
-		panel_3.add(button_110);
+		JButton btnH9 = new JButton("");
+		btnH9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH9);
 		
-		JButton button_111 = new JButton("");
-		panel_3.add(button_111);
+		JButton btnH10 = new JButton("");
+		btnH10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH10);
 		
-		JButton button_112 = new JButton("");
-		panel_3.add(button_112);
+		JButton btnH11 = new JButton("");
+		btnH11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH11);
 		
-		JButton button_113 = new JButton("");
-		panel_3.add(button_113);
+		JButton btnH12 = new JButton("");
+		btnH12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH12);
 		
-		JButton button_114 = new JButton("");
-		panel_3.add(button_114);
+		JButton btnH13 = new JButton("");
+		btnH13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btnH13);
 		
-		JButton button_115 = new JButton("");
-		panel_3.add(button_115);
+		JButton btn_I3 = new JButton("");
+		btn_I3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I3);
 		
-		JButton button_116 = new JButton("");
-		panel_3.add(button_116);
+		JButton btn_I4 = new JButton("");
+		btn_I4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I4);
 		
-		JButton button_117 = new JButton("");
-		panel_3.add(button_117);
+		JButton btn_I5 = new JButton("");
+		btn_I5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I5);
 		
-		JButton button_118 = new JButton("");
-		panel_3.add(button_118);
+		JButton btn_I6 = new JButton("");
+		btn_I6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I6);
 		
-		JButton button_119 = new JButton("");
-		panel_3.add(button_119);
+		JButton btn_I7 = new JButton("");
+		btn_I7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I7);
 		
-		JButton button_120 = new JButton("");
-		panel_3.add(button_120);
+		JButton btn_I8 = new JButton("");
+		btn_I8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I8);
 		
-		JButton button_121 = new JButton("");
-		panel_3.add(button_121);
+		JButton btn_I9 = new JButton("");
+		btn_I9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I9);
 		
-		JButton button_122 = new JButton("");
-		panel_3.add(button_122);
+		JButton btn_I10 = new JButton("");
+		btn_I10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I10);
 		
-		JButton button_123 = new JButton("");
-		panel_3.add(button_123);
+		JButton btn_I11 = new JButton("");
+		btn_I11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I11);
 		
-		JButton button_124 = new JButton("");
-		panel_3.add(button_124);
-		
-		JLabel lblNewLabel = new JLabel("\uC2A4\uD06C\uB9B0");
-		lblNewLabel.setBackground(new Color(192, 192, 192));
-		lblNewLabel.setFont(new Font("±º∏≤", Font.PLAIN, 20));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(12, 10, 962, 40);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblNewLabel_1 = new JLabel("A");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(18, 107, 36, 22);
-		contentPane.add(lblNewLabel_1);
-		
-		JLabel lblB = new JLabel("B");
-		lblB.setHorizontalAlignment(SwingConstants.CENTER);
-		lblB.setBounds(18, 139, 36, 22);
-		contentPane.add(lblB);
-		
-		JLabel lblC = new JLabel("C");
-		lblC.setHorizontalAlignment(SwingConstants.CENTER);
-		lblC.setBounds(18, 171, 36, 22);
-		contentPane.add(lblC);
-		
-		JLabel lblD = new JLabel("D");
-		lblD.setHorizontalAlignment(SwingConstants.CENTER);
-		lblD.setBounds(18, 203, 36, 22);
-		contentPane.add(lblD);
-		
-		JLabel lblE = new JLabel("E");
-		lblE.setHorizontalAlignment(SwingConstants.CENTER);
-		lblE.setBounds(18, 235, 36, 22);
-		contentPane.add(lblE);
-		
-		JLabel lblF = new JLabel("F");
-		lblF.setHorizontalAlignment(SwingConstants.CENTER);
-		lblF.setBounds(18, 299, 36, 22);
-		contentPane.add(lblF);
-		
-		JLabel lblG = new JLabel("G");
-		lblG.setHorizontalAlignment(SwingConstants.CENTER);
-		lblG.setBounds(18, 331, 36, 22);
-		contentPane.add(lblG);
-		
-		JLabel lblH = new JLabel("H");
-		lblH.setHorizontalAlignment(SwingConstants.CENTER);
-		lblH.setBounds(18, 366, 36, 22);
-		contentPane.add(lblH);
-		
-		JLabel lblI = new JLabel("I");
-		lblI.setHorizontalAlignment(SwingConstants.CENTER);
-		lblI.setBounds(18, 398, 36, 22);
-		contentPane.add(lblI);
-		
-		JPanel panel_5 = new JPanel();
-		panel_5.setBounds(717, 266, 257, 122);
-		contentPane.add(panel_5);
+		JButton btn_I12 = new JButton("");
+		btn_I12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.add(btn_I12);
 		
 		JPanel panel_6 = new JPanel();
 		panel_6.setBackground(new Color(238, 130, 238));
-		panel_6.setBounds(701, 398, 273, 55);
+		panel_6.setBounds(701, 331, 273, 55);
 		contentPane.add(panel_6);
 		panel_6.setLayout(null);
 		
-		txtwon = new JTextField();
-		txtwon.setEditable(false);
-		txtwon.setBackground(new Color(238, 130, 238));
-		txtwon.setForeground(new Color(255, 255, 255));
-		txtwon.setHorizontalAlignment(SwingConstants.CENTER);
-		txtwon.setFont(new Font("±º∏≤", Font.PLAIN, 18));
-		txtwon.setBounds(131, 10, 130, 35);
-		txtwon.setText("(\uAE08\uC561 \uD544\uB4DC)");
-		panel_6.add(txtwon);
-		txtwon.setColumns(10);
+		JLabel lblPrice = new JLabel("\uCD1D \uACB0\uC81C \uAE08\uC561 :");
+		lblPrice.setFont(new Font("±º∏≤", Font.PLAIN, 18));
+		lblPrice.setBounds(5, 10, 114, 35);
+		panel_6.add(lblPrice);
 		
-		JLabel lblNewLabel_2 = new JLabel("\uCD1D \uACB0\uC81C \uAE08\uC561 :");
-		lblNewLabel_2.setFont(new Font("±º∏≤", Font.PLAIN, 18));
-		lblNewLabel_2.setBounds(5, 10, 114, 35);
-		panel_6.add(lblNewLabel_2);
+		txtPrice = new JTextField();
+		txtPrice.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		txtPrice.setEditable(false);
+		txtPrice.setBackground(new Color(238, 130, 238));
+		txtPrice.setForeground(new Color(255, 255, 255));
+		txtPrice.setHorizontalAlignment(SwingConstants.CENTER);
+		txtPrice.setFont(new Font("±º∏≤", Font.PLAIN, 18));
+		txtPrice.setBounds(131, 10, 130, 35);
+		txtPrice.setText("(\uAE08\uC561 \uD544\uB4DC)");
+		panel_6.add(txtPrice);
+		txtPrice.setColumns(10);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(Color.LIGHT_GRAY);
+		panel_5.setBounds(12, 10, 974, 40);
+		contentPane.add(panel_5);
+		panel_5.setLayout(null);
+		
+		JLabel lblScreen = new JLabel("\uC2A4\uD06C\uB9B0");
+		lblScreen.setBounds(443, 10, 60, 24);
+		panel_5.add(lblScreen);
+		lblScreen.setBackground(new Color(192, 192, 192));
+		lblScreen.setFont(new Font("±º∏≤", Font.PLAIN, 20));
+		lblScreen.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JPanel panel_7 = new JPanel();
+		panel_7.setForeground(Color.WHITE);
+		panel_7.setBounds(18, 101, 36, 326);
+		contentPane.add(panel_7);
+		panel_7.setLayout(null);
+		
+		JLabel lblA = new JLabel("A");
+		lblA.setForeground(Color.BLUE);
+		lblA.setBounds(0, 5, 36, 22);
+		panel_7.add(lblA);
+		lblA.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblB = new JLabel("B");
+		lblB.setForeground(Color.BLUE);
+		lblB.setBounds(0, 37, 36, 22);
+		panel_7.add(lblB);
+		lblB.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblC = new JLabel("C");
+		lblC.setForeground(Color.BLUE);
+		lblC.setBounds(0, 69, 36, 22);
+		panel_7.add(lblC);
+		lblC.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblD = new JLabel("D");
+		lblD.setForeground(Color.BLUE);
+		lblD.setBounds(0, 101, 36, 22);
+		panel_7.add(lblD);
+		lblD.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblE = new JLabel("E");
+		lblE.setForeground(Color.BLUE);
+		lblE.setBounds(0, 133, 36, 22);
+		panel_7.add(lblE);
+		lblE.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblF = new JLabel("F");
+		lblF.setForeground(Color.BLUE);
+		lblF.setBounds(0, 197, 36, 22);
+		panel_7.add(lblF);
+		lblF.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblG = new JLabel("G");
+		lblG.setForeground(Color.BLUE);
+		lblG.setBounds(0, 232, 36, 22);
+		panel_7.add(lblG);
+		lblG.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblH = new JLabel("H");
+		lblH.setForeground(Color.BLUE);
+		lblH.setBounds(0, 265, 36, 22);
+		panel_7.add(lblH);
+		lblH.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblI = new JLabel("I");
+		lblI.setForeground(Color.BLUE);
+		lblI.setBounds(0, 300, 36, 22);
+		panel_7.add(lblI);
+		lblI.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JButton btnNext = new JButton("¥Ÿ¿Ω");
+		btnNext.setBackground(Color.RED);
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				reservation_Pay = new Reservation_Pay();
+				reservation_Pay.setVisible(true);
+				dispose();
+			}
+		});
+		btnNext.setFont(new Font("±º∏≤", Font.PLAIN, 15));
+		btnNext.setBounds(879, 398, 95, 40);
+		contentPane.add(btnNext);
 	}
 }

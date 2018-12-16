@@ -22,7 +22,7 @@ public class Sign_in extends JFrame {
 	private JPasswordField number2;
 	private JPasswordField txtPW;
 	private JPasswordField txtPWchk;
-	private JTextField EmailField;
+	private JTextField txtEmail;
 	
 	private LoginFrame loginFrame;
 	
@@ -58,6 +58,31 @@ public class Sign_in extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		
+		JLabel lblTitle = new JLabel("약관 동의");
+		lblTitle.setBackground(new Color(173, 255, 47));
+		lblTitle.setFont(new Font("굴림", Font.PLAIN, 16));
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setBounds(12, 10, 70, 20);
+		contentPane.add(lblTitle);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setEditable(false);
+		
+		JScrollPane scrollPane = new JScrollPane(textArea);
+		scrollPane.setBounds(12, 62, 400, 200);
+		contentPane.add(scrollPane);
+		
+		JCheckBox chkBox = new JCheckBox("\uC0C1\uAE30 \uB0B4\uC6A9\uC744 \uD655\uC778\uD558\uC600\uC73C\uBA70 \uC774\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.");
+		chkBox.setFont(new Font("굴림", Font.PLAIN, 16));
+		chkBox.setBounds(8, 265, 346, 23);
+		contentPane.add(chkBox);
+		
+		JLabel lblTitle2 = new JLabel("개인정보 입력");
+		lblTitle2.setBackground(new Color(173, 255, 47));
+		lblTitle2.setFont(new Font("굴림", Font.PLAIN, 16));
+		lblTitle2.setBounds(12, 294, 111, 20);
+		contentPane.add(lblTitle2);
+		
 		JLabel lblName = new JLabel("이름 :");
 		lblName.setFont(new Font("굴림", Font.PLAIN, 18));
 		lblName.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -76,11 +101,21 @@ public class Sign_in extends JFrame {
 		label.setBounds(12, 364, 120, 30);
 		contentPane.add(label);
 		
-		number1 = new JTextField();
+		number1 = new JTextField(); // 주민번호 앞자리
 		number1.setFont(new Font("굴림", Font.PLAIN, 18));
 		number1.setColumns(10);
 		number1.setBounds(144, 369, 105, 20);
 		contentPane.add(number1);
+		
+		JLabel lbl_ = new JLabel("-");
+		lbl_.setFont(new Font("굴림", Font.PLAIN, 20));
+		lbl_.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_.setBounds(244, 371, 52, 15);
+		contentPane.add(lbl_);
+		
+		number2 = new JPasswordField(); // 주민번호 뒷자리
+		number2.setBounds(292, 370, 120, 20);
+		contentPane.add(number2);
 		
 		JLabel lblId = new JLabel("아이디 :");
 		lblId.setFont(new Font("굴림", Font.PLAIN, 18));
@@ -94,86 +129,10 @@ public class Sign_in extends JFrame {
 		txtID.setBounds(144, 409, 105, 20);
 		contentPane.add(txtID);
 		
-		JLabel lblPw = new JLabel("비밀번호 :");
-		lblPw.setFont(new Font("굴림", Font.PLAIN, 18));
-		lblPw.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblPw.setBounds(34, 444, 98, 30);
-		contentPane.add(lblPw);
-		
-		JButton btnIDchk = new JButton("비밀번호확인");
+		JButton btnIDchk = new JButton("\uC911\uBCF5\uD655\uC778");
 		
 		btnIDchk.setBounds(275, 410, 95, 20);
 		contentPane.add(btnIDchk);
-		
-		JLabel lblPWchk = new JLabel("비밀번호확인 : ");
-		lblPWchk.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblPWchk.setFont(new Font("굴림", Font.PLAIN, 18));
-		lblPWchk.setBounds(12, 484, 120, 30);
-		contentPane.add(lblPWchk);
-		
-		JButton btnPWChk = new JButton("비밀번호확인 : ");
-		btnPWChk.setBounds(275, 490, 120, 20);
-		contentPane.add(btnPWChk);
-		
-		number2 = new JPasswordField(); // 주민번호 뒷자리
-		number2.setBounds(292, 370, 120, 20);
-		contentPane.add(number2);
-		
-		JLabel lbl_ = new JLabel("-");
-		lbl_.setFont(new Font("굴림", Font.PLAIN, 20));
-		lbl_.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl_.setBounds(244, 371, 52, 15);
-		contentPane.add(lbl_);
-		
-		JCheckBox chkBox = new JCheckBox("\uC0C1\uAE30 \uB0B4\uC6A9\uC744 \uD655\uC778\uD558\uC600\uC73C\uBA70 \uC774\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.");
-		chkBox.setFont(new Font("굴림", Font.PLAIN, 16));
-		chkBox.setBounds(8, 265, 346, 23);
-		contentPane.add(chkBox);
-		
-		JLabel lblTitle2 = new JLabel("개인정보 입력");
-		lblTitle2.setBackground(new Color(173, 255, 47));
-		lblTitle2.setFont(new Font("굴림", Font.PLAIN, 16));
-		lblTitle2.setBounds(12, 294, 111, 20);
-		contentPane.add(lblTitle2);
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setEditable(false); // 안만지셔도 됩니다
-		textArea.setText("\uC548\uB155\uD558\uC138\uC694^^\r\n\r\n\uC6D0\uB798 \uC57D\uAD00 \uBD80\uBD84\uC778\uB370 \uB108\uBB34 \uAE38\uACE0\r\n\uC2DC\uAC04 \uC5C6\uC5B4\uC11C \uC774\uC815\uB3C4\uB9CC \uC501\uB2C8\uB2E4\r\n\r\n\u314B\u314B\u314B\u314B\u314B\u314B\u314B\u314B\u314B\u314B\r\n\r\n\uC9C0\uAE08 \uC2DC\uAC04 2018.11.30\r\n\uC624\uD6C4 4:50\r\n\r\n\uBC30\uACE0\uD504\uB124\uC694\r\n\uBC25\uBA39\uC73C\uB7EC \uAC00\uACA0\uC2B5\uB2C8\uB2E4\r\n\r\n\uADF8\uB7FC \uC774\uB9CC.. \u314E");
-		
-		JScrollPane scrollPane = new JScrollPane(textArea);
-		scrollPane.setBounds(12, 62, 400, 200);
-		contentPane.add(scrollPane);
-		
-		txtPW = new JPasswordField(); // 비밀번호
-		txtPW.setBounds(144, 450, 105, 20);
-		contentPane.add(txtPW);
-		
-		txtPWchk = new JPasswordField(); // 비밀번호 확인
-		txtPWchk.setBounds(144, 490, 105, 20);
-		contentPane.add(txtPWchk);
-		
-		JLabel lblTitle = new JLabel("약관 동의");
-		lblTitle.setBackground(new Color(173, 255, 47));
-		lblTitle.setFont(new Font("굴림", Font.PLAIN, 16));
-		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(12, 10, 70, 20);
-		contentPane.add(lblTitle);
-		
-		JButton btnNext = new JButton("다음");
-		
-		btnNext.setFont(new Font("굴림", Font.PLAIN, 18));
-		btnNext.setBounds(379, 580, 95, 23);
-		contentPane.add(btnNext);
-		
-		JLabel lblEmail = new JLabel("이메일 :");
-		lblEmail.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblEmail.setFont(new Font("굴림", Font.PLAIN, 18));
-		lblEmail.setBounds(12, 524, 120, 30);
-		contentPane.add(lblEmail);
-		
-		EmailField = new JTextField();
-		EmailField.setBounds(144, 530, 105, 20);
-		contentPane.add(EmailField);
 		
 		btnIDchk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -182,12 +141,45 @@ public class Sign_in extends JFrame {
 			}
 		});
 		
-		btnPWChk.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				// 비밀번호 입력 2번한 거 일치하는지 확인
-				
-			}
-		});
+		JLabel lblPw = new JLabel("비밀번호 :");
+		lblPw.setFont(new Font("굴림", Font.PLAIN, 18));
+		lblPw.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblPw.setBounds(34, 444, 98, 30);
+		contentPane.add(lblPw);
+		
+		txtPW = new JPasswordField(); // 비밀번호
+		txtPW.setBounds(144, 450, 105, 20);
+		contentPane.add(txtPW);
+		
+		JLabel lblPWchk = new JLabel("\uBE44\uBC00\uBC88\uD638\uD655\uC778: ");
+		lblPWchk.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblPWchk.setFont(new Font("굴림", Font.PLAIN, 18));
+		lblPWchk.setBounds(12, 484, 120, 30);
+		contentPane.add(lblPWchk);
+		
+		txtPWchk = new JPasswordField(); // 비밀번호 확인
+		txtPWchk.setBounds(144, 490, 105, 20);
+		contentPane.add(txtPWchk);
+		
+		JButton btnPWChk = new JButton("비밀번호확인 : ");
+		btnPWChk.setBounds(275, 490, 120, 20);
+		contentPane.add(btnPWChk);
+		
+		JLabel lblEmail = new JLabel("이메일 :");
+		lblEmail.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblEmail.setFont(new Font("굴림", Font.PLAIN, 18));
+		lblEmail.setBounds(12, 524, 120, 30);
+		contentPane.add(lblEmail);
+		
+		txtEmail = new JTextField();
+		txtEmail.setBounds(144, 530, 105, 20);
+		contentPane.add(txtEmail);
+		
+		JButton btnNext = new JButton("다음");
+		
+		btnNext.setFont(new Font("굴림", Font.PLAIN, 18));
+		btnNext.setBounds(379, 580, 95, 23);
+		contentPane.add(btnNext);
 		
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -198,13 +190,20 @@ public class Sign_in extends JFrame {
 				PW = new String(txtPW.getPassword());
 				Name = txtName.getText();
 				Number = number1.getText().concat(new String(number2.getPassword()));
-				Email = EmailField.getText();
+				Email = txtEmail.getText();
 				Customerlist.add(new Customer(ID, PW, Name, Number, Email));
 				saveObject();
 				
 				loginFrame = new LoginFrame();
 				loginFrame.setVisible(true);
 				dispose();
+			}
+		});
+		
+		btnPWChk.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// 비밀번호 입력 2번한 거 일치하는지 확인
+				
 			}
 		});
 	}
