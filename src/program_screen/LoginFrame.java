@@ -34,11 +34,11 @@ public class LoginFrame extends JFrame {
 	
 	private String inputID, inputPW;
 	private ArrayList<Customer> Customerlist;
-	String UserID, UserPW;
-	String UserName;
-	String UserEmail;
-	String UserNumber;
-	String UserPhoneNumber;
+	static String UserID, UserPW;
+	static String UserName;
+	static String UserEmail;
+	static String UserNumber;
+	static String UserPhoneNumber;
 	
 	/**
 	 * Launch the application.
