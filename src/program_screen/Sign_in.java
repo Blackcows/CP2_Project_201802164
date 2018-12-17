@@ -11,6 +11,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import javax.swing.*;
+
 import Theater.Customer;
 
 public class Sign_in extends JFrame {
@@ -23,14 +24,15 @@ public class Sign_in extends JFrame {
 	private JPasswordField txtPW;
 	private JPasswordField txtPWchk;
 	private JTextField txtEmail;
-	
+
 	private LoginFrame loginFrame;
-	
+
 	private ArrayList<Customer> Customerlist;
 	private String ID, PW;
 	private String Name;
 	private String Number;
 	private String Email;
+	private boolean IDchk, PWchk;
 
 	/**
 	 * Launch the application.
@@ -57,157 +59,178 @@ public class Sign_in extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
-		
+
 		JLabel lblTitle = new JLabel("약관 동의");
 		lblTitle.setBackground(new Color(173, 255, 47));
 		lblTitle.setFont(new Font("굴림", Font.PLAIN, 16));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setBounds(12, 10, 70, 20);
 		contentPane.add(lblTitle);
-		
+
 		JTextArea textArea = new JTextArea();
 		textArea.setEditable(false);
-		
+
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		scrollPane.setBounds(12, 62, 400, 200);
 		contentPane.add(scrollPane);
-		
+
 		JCheckBox chkBox = new JCheckBox("\uC0C1\uAE30 \uB0B4\uC6A9\uC744 \uD655\uC778\uD558\uC600\uC73C\uBA70 \uC774\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.");
 		chkBox.setFont(new Font("굴림", Font.PLAIN, 16));
 		chkBox.setBounds(8, 265, 346, 23);
 		contentPane.add(chkBox);
-		
+
 		JLabel lblTitle2 = new JLabel("개인정보 입력");
 		lblTitle2.setBackground(new Color(173, 255, 47));
 		lblTitle2.setFont(new Font("굴림", Font.PLAIN, 16));
 		lblTitle2.setBounds(12, 294, 111, 20);
 		contentPane.add(lblTitle2);
-		
+
 		JLabel lblName = new JLabel("이름 :");
 		lblName.setFont(new Font("굴림", Font.PLAIN, 18));
 		lblName.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblName.setBounds(62, 324, 70, 30);
 		contentPane.add(lblName);
-		
+
 		txtName = new JTextField();
 		txtName.setFont(new Font("굴림", Font.PLAIN, 18));
 		txtName.setBounds(144, 329, 105, 20);
 		contentPane.add(txtName);
 		txtName.setColumns(10);
-		
+
 		JLabel label = new JLabel("\uC8FC\uBBFC\uB4F1\uB85D\uBC88\uD638 :");
 		label.setFont(new Font("굴림", Font.PLAIN, 18));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setBounds(12, 364, 120, 30);
 		contentPane.add(label);
-		
+
 		number1 = new JTextField(); // 주민번호 앞자리
 		number1.setFont(new Font("굴림", Font.PLAIN, 18));
 		number1.setColumns(10);
 		number1.setBounds(144, 369, 105, 20);
 		contentPane.add(number1);
-		
+
 		JLabel lbl_ = new JLabel("-");
 		lbl_.setFont(new Font("굴림", Font.PLAIN, 20));
 		lbl_.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_.setBounds(244, 371, 52, 15);
 		contentPane.add(lbl_);
-		
+
 		number2 = new JPasswordField(); // 주민번호 뒷자리
 		number2.setBounds(292, 370, 120, 20);
 		contentPane.add(number2);
-		
+
 		JLabel lblId = new JLabel("아이디 :");
 		lblId.setFont(new Font("굴림", Font.PLAIN, 18));
 		lblId.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblId.setBounds(62, 404, 70, 30);
 		contentPane.add(lblId);
-		
+
 		txtID = new JTextField();
 		txtID.setFont(new Font("굴림", Font.PLAIN, 18));
 		txtID.setColumns(10);
 		txtID.setBounds(144, 409, 105, 20);
 		contentPane.add(txtID);
-		
+
 		JButton btnIDchk = new JButton("\uC911\uBCF5\uD655\uC778");
-		
+
 		btnIDchk.setBounds(275, 410, 95, 20);
 		contentPane.add(btnIDchk);
-		
+
 		btnIDchk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 아이디 중복확인
-				
+				readObject();
+				for(int i=0; i<Customerlist.size(); i++) {
+					if(txtID.getText().equals(Customerlist.get(i).getID())) {
+						JOptionPane.showMessageDialog(null, "이미 존재하는 아이디입니다.");
+						IDchk = false;
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "사용 가능한 아이디입니다.");
+						IDchk = true;
+					}
+				}
 			}
 		});
-		
+
 		JLabel lblPw = new JLabel("비밀번호 :");
 		lblPw.setFont(new Font("굴림", Font.PLAIN, 18));
 		lblPw.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPw.setBounds(34, 444, 98, 30);
 		contentPane.add(lblPw);
-		
+
 		txtPW = new JPasswordField(); // 비밀번호
 		txtPW.setBounds(144, 450, 105, 20);
 		contentPane.add(txtPW);
-		
+
 		JLabel lblPWchk = new JLabel("\uBE44\uBC00\uBC88\uD638\uD655\uC778: ");
 		lblPWchk.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPWchk.setFont(new Font("굴림", Font.PLAIN, 18));
 		lblPWchk.setBounds(12, 484, 120, 30);
 		contentPane.add(lblPWchk);
-		
+
 		txtPWchk = new JPasswordField(); // 비밀번호 확인
 		txtPWchk.setBounds(144, 490, 105, 20);
 		contentPane.add(txtPWchk);
-		
+
 		JButton btnPWChk = new JButton("비밀번호확인 : ");
 		btnPWChk.setBounds(275, 490, 120, 20);
 		contentPane.add(btnPWChk);
-		
+
 		JLabel lblEmail = new JLabel("이메일 :");
 		lblEmail.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblEmail.setFont(new Font("굴림", Font.PLAIN, 18));
 		lblEmail.setBounds(12, 524, 120, 30);
 		contentPane.add(lblEmail);
-		
+
 		txtEmail = new JTextField();
 		txtEmail.setBounds(144, 530, 105, 20);
 		contentPane.add(txtEmail);
-		
+
 		JButton btnNext = new JButton("다음");
-		
+
 		btnNext.setFont(new Font("굴림", Font.PLAIN, 18));
 		btnNext.setBounds(379, 580, 95, 23);
 		contentPane.add(btnNext);
-		
+
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 회원 정보를 객체로 만들어서 입력하고 현재 창 종료, 로그인 창 다시 실행
-				
-				readObject();
-				ID = txtID.getText();
-				PW = new String(txtPW.getPassword());
-				Name = txtName.getText();
-				Number = number1.getText().concat(new String(number2.getPassword()));
-				Email = txtEmail.getText();
-				Customerlist.add(new Customer(ID, PW, Name, Number, Email));
-				saveObject();
-				
-				loginFrame = new LoginFrame();
-				loginFrame.setVisible(true);
-				dispose();
+
+				if (IDchk == true && PWchk == true) {
+					readObject();
+					ID = txtID.getText();
+					PW = new String(txtPW.getPassword());
+					Name = txtName.getText();
+					Number = number1.getText().concat(new String(number2.getPassword()));
+					Email = txtEmail.getText();
+					Customerlist.add(new Customer(ID, PW, Name, Number, Email));
+					saveObject();
+
+					loginFrame = new LoginFrame();
+					loginFrame.setVisible(true);
+					dispose();
+				}
 			}
 		});
-		
+
 		btnPWChk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 비밀번호 입력 2번한 거 일치하는지 확인
-				
+				String pwString = new String (txtPW.getPassword());
+				String pwchkString = new String (txtPWchk.getPassword());
+				if (pwString.equals(pwchkString)) {
+					JOptionPane.showMessageDialog(null, "비밀번호가 일치합니다.");
+					PWchk = true;
+				} else {
+					JOptionPane.showMessageDialog(null, "비밀번호가 일치하지 않습니다.");
+					PWchk = false;
+				}
 			}
 		});
 	}
-	
+
+
 	private void readObject() {
 		ObjectInputStream ois = null;
 		try {
@@ -235,6 +258,6 @@ public class Sign_in extends JFrame {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 }
+

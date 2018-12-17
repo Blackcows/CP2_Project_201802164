@@ -34,7 +34,7 @@ public class Client {
         BufferedReader br = null;
         
         try{
-            socket = new Socket("192.168.0.87", 9254); // 테스트를 위해 주소 자신의 IP로 바꿔주세여
+            socket = new Socket("10.3.56.235", 9254); // 테스트를 위해 주소 자신의 IP로 바꿔주세여
             if (socket.isConnected()) {
             os = socket.getOutputStream();
             osw = new OutputStreamWriter(os);
