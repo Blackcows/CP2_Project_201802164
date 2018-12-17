@@ -69,6 +69,7 @@ public class Reservation_Pay extends JFrame {
 		txtTotalPrice = new JTextField(); // 금액 나오는 필드
 		txtTotalPrice.setEditable(false);
 		txtTotalPrice.setBounds(134, 222, 116, 21);
+		txtTotalPrice.setText(Reservation_Personnel.price);
 		contentPane.add(txtTotalPrice);
 		txtTotalPrice.setColumns(10);
 		
